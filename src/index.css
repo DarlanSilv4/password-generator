@@ -1,3 +1,82 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base{
+input[type=range] {
+  @apply appearance-none bg-transparent cursor-pointer;
+}
+
+/*set up progress tail*/
+input[type=range] {
+  --range: calc(var(--max) - var(--min));
+  --ratio: calc((var(--value) - var(--min)) / var(--range));
+  --sx: calc(0.5 * 24px + var(--ratio) * (100% - 24px));
+}
+
+input[type=range]:focus {
+  @apply outline-none;
+}
+
+/*webkit*/
+input[type=range]::-webkit-slider-thumb {
+  @apply appearance-none w-6 h-6 rounded-full bg-white border-2 border-solid border-white;
+  margin-top: calc(0.5rem * 0.5 - max(24px * 0.5,2px));
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+  @apply h-2 border-none rounded-2xl bg-background shadow-none;
+}
+
+input[type=range]::-webkit-slider-thumb:hover {
+  @apply bg-background border-green;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+  background: linear-gradient(#A3FFAE,#A3FFAE) 0/var(--sx) 100% no-repeat, #0E0D12;
+}
+
+/*mozilla*/
+input[type=range]::-moz-range-thumb {
+  @apply rounded-2xl bg-white border-2 border-solid border-white w-6 h-6;
+ 
+}
+
+input[type=range]::-moz-range-track {
+  @apply h-2 border-none rounded-2xl bg-background shadow-none;
+}
+
+input[type=range]::-moz-range-thumb:hover {
+  @apply bg-background border-green;
+}
+
+input[type=range]::-moz-range-track {
+  background: linear-gradient(#A3FFAE,#A3FFAE) 0/var(--sx) 100% no-repeat, #0E0D12;
+}
+
+/*ms*/
+input[type=range]::-ms-fill-upper {
+  @apply bg-transparent border-transparent;
+}
+
+input[type=range]::-ms-fill-lower {
+  @apply bg-transparent border-transparent;
+}
+
+input[type=range]::-ms-thumb {
+  @apply w-6 h-6 rounded-2xl bg-white border-2 border-solid border-white shadow-none mt-0 box-border;
+}
+
+input[type=range]::-ms-track {
+  @apply h-2 rounded-2xl bg-background border-none shadow-none box-border;
+}
+
+input[type=range]::-ms-thumb:hover {
+  @apply bg-background border-green;
+}
+
+input[type=range]::-ms-fill-lower {
+  @apply h-2 rounded-2xl m-0 bg-green border-none border-r-0;
+}
+
+}
