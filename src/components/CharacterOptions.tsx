@@ -1,15 +1,17 @@
-import { useState } from "react";
 import { ReactComponent as CheckboxBlankSvg } from "../assets/checkbox_blank.svg";
 import { ReactComponent as CheckboxDoneSvg } from "../assets/checkbox_done.svg";
+
+interface Props {
+  options: string[];
+  setOptions: React.Dispatch<React.SetStateAction<string[]>>;
+}
 
 interface CheckboxProps {
   children: string;
   value: string;
 }
 
-export default function CharacterOptions() {
-  const [options, setOptions] = useState<string[]>([]);
-
+export default function CharacterOptions({ options, setOptions }: Props) {
   const removeItemFromArray = (item: string, array: string[]) => {
     const index = array.indexOf(item);
     if (index < 0) return array;
