@@ -1,7 +1,11 @@
 import { useEffect, useRef, useState } from "react";
 
-export default function CharacterLength() {
-  const [value, setValue] = useState("10");
+interface Props {
+  value: string;
+  setValue: React.Dispatch<React.SetStateAction<string>>;
+}
+
+export default function CharacterLength({ value, setValue }: Props) {
   const rangeInputNode = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
