@@ -50,6 +50,12 @@ function App() {
       <h1 className="text-white opacity-60 font-bold">Password Generator</h1>
       <section className="flex items-center justify-between p-4 bg-foreground w-11/12  sm:w-2/3 lg:w-2/5 lg:max-w-md text-white font-bold text-xl">
         <p>{password}</p>
+        <button
+          className="cursor-pointer"
+          onClick={() => {
+            navigator.clipboard.writeText(password);
+          }}
+        >
           <CopySvg className="text-green hover:text-white" />
         </button>
       </section>
