@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import { ReactComponent as CopySvg } from "./assets/copy.svg";
 import { ReactComponent as ArrowSvg } from "./assets/arrow.svg";
@@ -44,6 +44,10 @@ function App() {
 
     setPassword(password.join(""));
   };
+
+  useEffect(() => {
+    handleGeneratePassword();
+  }, []);
 
   return (
     <div className="flex flex-col gap-4 items-center justify-center min-w-screen min-h-screen py-5 bg-background text-white font-mono">
