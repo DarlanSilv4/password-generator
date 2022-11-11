@@ -5,6 +5,7 @@
 
 <p align="center">
   <a href="#-password-generator">Password Generator</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-demo">Demo</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-built-with">Built With</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-getting-started">Getting Started</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-license">License</a>
@@ -21,11 +22,15 @@
 
 <br>
 
-## 🎮 Password Generator
+## 🔐 Password Generator
 
-Use Password Generator to generate strong passwords online quickly. Mix letters, numbers, and symbols for the ultimate in security. You can use it on any computer, phone, or tablet.
+Use [Password Generator](https://password-generator-ds4.vercel.app/) to generate strong passwords online quickly. Mix letters, numbers, and symbols for the ultimate in security. You can use it on any computer, phone, or tablet.
 
 _This is originally a [Frontend Mentor](https://www.frontendmentor.io/challenges/password-generator-app-Mr8CLycqjh) challenge._
+
+## 🌐 Demo
+
+[Click Here](https://password-generator-ds4.vercel.app/)
 
 ## ✨ Built With
 
